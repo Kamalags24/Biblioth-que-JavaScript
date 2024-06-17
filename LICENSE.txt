@@ -1,0 +1,31 @@
+
+**arrayUtils.js :**
+
+```javascript
+// arrayUtils.js
+
+/**
+ * Somme des éléments d'un tableau.
+ * @param {number[]} arr - Le tableau de nombres.
+ * @return {number} La somme des nombres dans le tableau.
+ */
+function sumArray(arr) {
+    // Utilisation de la méthode reduce pour accumuler les valeurs du tableau
+    return arr.reduce((acc, val) => acc + val, 0);
+}
+
+/**
+ * Suppression des doublons dans un tableau.
+ * @param {any[]} arr - Le tableau contenant des éléments dupliqués.
+ * @return {any[]} Un nouveau tableau sans doublons.
+ */
+function removeDuplicates(arr) {
+    // Utilisation d'un Set pour éliminer les doublons, puis conversion en tableau
+    return [...new Set(arr)];
+}
+
+// Exportation des fonctions pour les rendre disponibles dans d'autres fichiers
+module.exports = {
+    sumArray,
+    removeDuplicates
+};
